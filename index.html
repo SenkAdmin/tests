@@ -1,0 +1,341 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0a0b0e" />
+  <title>Senk - портфолио</title>
+  <meta name="description" content="Сэнг — дизайнер / веб-разработчик / разработчик Telegram-ботов. Премиальный минимализм, кейсы и проекты." />
+
+  <link rel="preload" as="image" href="assets/seng.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/projects/landing/01.jpg">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <header>
+    <div class="bar glass" id="bar">
+      <div class="brand" aria-label="Бренд">
+        <span class="dot" aria-hidden="true"></span>
+        <strong>Senk</strong>
+        <span>portfolio</span>
+      </div>
+
+      <nav aria-label="Навигация">
+        <button class="navbtn" type="button" data-scroll="#projects">Проекты</button>
+        <button class="navbtn" type="button" data-scroll="#cases">Кейсы</button>
+        <button class="navbtn" type="button" data-scroll="#contacts">Контакты</button>
+      </nav>
+
+      <div class="fxswitch" aria-label="Осадки">
+        <div class="seg" role="group" aria-label="Режим осадков">
+          <button type="button" class="fxbtn" data-fx="rain" aria-pressed="false" title="Дождь">Rain</button>
+          <button type="button" class="fxbtn" data-fx="snow" aria-pressed="false" title="Снег">Snow</button>
+          <button type="button" class="fxbtn" data-fx="off"  aria-pressed="true"  title="Выключено">Off</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero glass panel">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <h1 class="title"><span id="titleText">Senk</span><span class="caret" aria-hidden="true"></span></h1>
+          <p class="subtitle">
+            Дизайнер / Веб-разработчик / Разработчик Telegram-ботов
+            <br />
+            Делаю тихие премиальные интерфейсы в графитовом стиле — стекло, глубина, аккуратные микродвижения.
+            Фокус: мобильный UX и чистая визуальная иерархия.
+          </p>
+          <p class="subline">Свайпай проекты • открывай кейсы • заказывай через Telegram</p>
+        </div>
+
+        <div class="hero-right">
+          <img class="hero-photo" src="assets/seng.jpg" alt="Сэнг" loading="eager" decoding="async" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-head">
+        <h2 class="h2">Избранные проекты</h2>
+      </div>
+
+      <div class="grid projects">
+        <article class="glass card">
+          <div class="card-inner">
+            <div class="viewer js-viewer"
+                 data-kind="project"
+                 data-title="Лендинг продукта"
+                 data-images="assets/projects/landing/01.jpg,assets/projects/landing/02.jpg,assets/projects/landing/03.jpg,assets/projects/landing/04.jpg">
+              <div class="track"></div>
+              <div class="pill" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="meta">
+              <h3>Лендинг продукта (Web)</h3>
+              <p>Стеклянные панели, чистая композиция, плотный UX. Быстро, тихо, “дорого”.</p>
+            </div>
+
+            <div class="actions">
+              <div class="mini">
+                <span>4 кадра</span>
+                <span class="barline" aria-hidden="true"><i style="--p:25%"></i></span>
+              </div>
+              <button class="btn secondary js-photo" type="button">Фото</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass card">
+          <div class="card-inner">
+            <div class="viewer js-viewer"
+                 data-kind="project"
+                 data-title="Telegram-бот"
+                 data-images="assets/projects/bot/01.jpg,assets/projects/bot/02.jpg,assets/projects/bot/03.jpg,assets/projects/bot/04.jpg">
+              <div class="track"></div>
+              <div class="pill" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="meta">
+              <h3>Telegram-бот (Flow + UI)</h3>
+              <p>Сценарии, клавиатуры, логика, интеграции. Максимум простоты, минимум шума.</p>
+            </div>
+
+            <div class="actions">
+              <div class="mini">
+                <span>4 кадра</span>
+                <span class="barline" aria-hidden="true"><i style="--p:50%"></i></span>
+              </div>
+              <button class="btn secondary js-photo" type="button">Фото</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass card">
+          <div class="card-inner">
+            <div class="viewer js-viewer"
+                 data-kind="project"
+                 data-title="Дизайн-пак"
+                 data-images="assets/projects/designpack/01.jpg,assets/projects/designpack/02.jpg,assets/projects/designpack/03.jpg,assets/projects/designpack/04.jpg">
+              <div class="track"></div>
+              <div class="pill" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="meta">
+              <h3>Дизайн (обложки/постеры)</h3>
+              <p>Графитовая эстетика, чистая типографика и композиция. Пакеты/вариации.</p>
+            </div>
+
+            <div class="actions">
+              <div class="mini">
+                <span>4 кадра</span>
+                <span class="barline" aria-hidden="true"><i style="--p:75%"></i></span>
+              </div>
+              <button class="btn secondary js-photo" type="button">Фото</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="section-head">
+        <h2 class="h2">Кейсы</h2>
+      </div>
+
+      <div class="grid cases">
+        <article class="glass card case-card js-case"
+                 aria-label="Кейс: Разработка сайта"
+                 data-case-id="site"
+                 data-case-name="Разработка сайта"
+                 data-case-desc="Полный цикл: структура, дизайн, верстка, анимации и адаптив. Визуальная чистота + скорость."
+                 data-case-tasks="Аналитика и структура | Дизайн в премиум-минимализме | Верстка (HTML/CSS/JS) | Анимации и оптимизация | Адаптив под мобильные"
+                 data-images="assets/cases/site/01.jpg,assets/cases/site/02.jpg,assets/cases/site/03.jpg,assets/cases/site/04.jpg">
+          <div class="card-inner">
+            <div class="viewer js-viewer" data-kind="case">
+              <div class="track"></div>
+              <div class="pill" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="meta">
+              <h3>Разработка сайта</h3>
+              <p>Технологичный лендинг/портфолио: стекло, глубина, чистый mobile-first UX.</p>
+            </div>
+
+            <div class="actions">
+              <span></span>
+              <button class="btn secondary js-open-case" type="button">Кейс</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass card case-card js-case"
+                 aria-label="Кейс: Разработка Telegram-бота"
+                 data-case-id="bot"
+                 data-case-name="Разработка Telegram-бота"
+                 data-case-desc="Быстро и надежно: логика, сценарии, обработчики, интеграции. UX — максимально простой."
+                 data-case-tasks="Проектирование сценариев | Клавиатуры/меню | Интеграции (API/таблицы/CRM) | Микрокопирайтинг | Тестирование и запуск"
+                 data-images="assets/cases/bot/01.jpg,assets/cases/bot/02.jpg,assets/cases/bot/03.jpg,assets/cases/bot/04.jpg">
+          <div class="card-inner">
+            <div class="viewer js-viewer" data-kind="case">
+              <div class="track"></div>
+              <div class="pill" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="meta">
+              <h3>Разработка Telegram-бота</h3>
+              <p>Сценарии, интеграции, стабильная логика. Без токенов во фронте.</p>
+            </div>
+
+            <div class="actions">
+              <span></span>
+              <button class="btn secondary js-open-case" type="button">Кейс</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass card case-card js-case"
+                 aria-label="Кейс: Дизайн"
+                 data-case-id="design"
+                 data-case-name="Дизайн (аватарки / превью / постеры)"
+                 data-case-desc="Сильная композиция и иерархия. Графитовая премиум-эстетика без ярких акцентов."
+                 data-case-tasks="Концепты и стилистика | Сетка и композиция | Типографика | Подготовка для площадок | Пакеты/вариации"
+                 data-images="assets/cases/design/01.jpg,assets/cases/design/02.jpg,assets/cases/design/03.jpg,assets/cases/design/04.jpg">
+          <div class="card-inner">
+            <div class="viewer js-viewer" data-kind="case">
+              <div class="track"></div>
+              <div class="pill" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="meta">
+              <h3>Дизайн</h3>
+              <p>Аватарки, превью, постеры: тихий premium-минимализм как у студии.</p>
+            </div>
+
+            <div class="actions">
+              <span></span>
+              <button class="btn secondary js-open-case" type="button">Кейс</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div id="contacts" aria-hidden="true" style="height:1px;"></div>
+
+    <footer class="socials-float" aria-label="Социальные сети">
+      <a class="social" id="tgLink" href="https://t.me/knesit" target="_blank" rel="noopener noreferrer" aria-label="Telegram @knesit">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M21.8 5.3 18.6 20c-.2 1-1.2 1.2-2 .7l-4.6-3.4-2.2 2.1c-.2.2-.4.4-.8.4l.3-5.2 9.4-8.5c.4-.3-.1-.5-.6-.2l-11.6 7.3-5-1.6c-1.1-.3-1.1-1.1.2-1.6L20 4.6c.9-.3 1.7.2 1.8.7z"/>
+        </svg>
+        <span class="sr-only">Telegram</span>
+      </a>
+
+      <a class="social" id="vkLink" href="https://vk.ru/id832169768" target="_blank" rel="noopener noreferrer" aria-label="VK">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4.5 7.4c.12 6.2 3.25 10.2 8.7 10.2h.33v-3.55c2.05.2 3.6 1.7 4.22 3.55H21c-.8-2.95-3.3-4.65-4.86-5.3 1.56-.9 3.8-2.9 4.3-5H17.8c-.65 2.15-2.72 4.15-4.27 4.33V7.4h-2.5v7.5c-1.6-.45-3.62-2.62-3.7-7.5H4.5Z"
+                fill="currentColor" opacity=".92"/>
+        </svg>
+        <span class="sr-only">VK</span>
+      </a>
+
+      <a class="social" id="ttLink" href="https://www.tiktok.com/@Knes_01" target="_blank" rel="noopener noreferrer" aria-label="TikTok @Knes_01">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M14 4v10.2a3.8 3.8 0 1 1-3.2-3.74V8.2a6.3 6.3 0 1 0 5.7 6.3V9.2c1.1.8 2.5 1.3 4 1.35V8.1c-2.2-.1-4-1.9-4.1-4.1H14Z"
+                fill="currentColor" opacity=".92"/>
+        </svg>
+        <span class="sr-only">TikTok</span>
+      </a>
+    </footer>
+  </main>
+
+  <div class="modal" id="caseModal" aria-hidden="true" aria-modal="true" role="dialog">
+    <div class="backdrop js-close" aria-hidden="true"></div>
+
+    <div class="sheet case">
+      <div class="modal-top" style="grid-column: 1 / -1;">
+        <p class="modal-title">Кейс</p>
+        <button class="close js-close" type="button" aria-label="Закрыть">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-left">
+        <div class="viewer js-modal-viewer" data-kind="modal">
+          <div class="track" id="caseTrack"></div>
+          <div class="pill" id="caseDots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="navrow">
+          <button class="iconbtn" type="button" id="casePrev" aria-label="Предыдущее изображение">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M14.5 5L7.5 12L14.5 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="iconbtn" type="button" id="caseNext" aria-label="Следующее изображение">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9.5 5L16.5 12L9.5 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-right">
+        <h3 class="case-name" id="caseName">Название кейса</h3>
+        <p class="case-desc" id="caseDesc">Описание...</p>
+        <ul class="work-list" id="caseTasks"></ul>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top: 8px;">
+          <button class="btn" id="wantBtn" type="button">Хочу так же</button>
+          <button class="btn secondary js-close" type="button">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="photoModal" aria-hidden="true" aria-modal="true" role="dialog">
+    <div class="backdrop js-photo-close" aria-hidden="true"></div>
+
+    <div class="sheet photo">
+      <div class="modal-top">
+        <p class="modal-title" id="photoTitle">Фото</p>
+        <button class="close js-photo-close" type="button" aria-label="Закрыть">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-left" style="padding: 6px;">
+        <div class="viewer js-photo-viewer" data-kind="photo">
+          <div class="track" id="photoTrack"></div>
+          <div class="pill" id="photoDots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="navrow">
+          <button class="iconbtn" type="button" id="photoPrev" aria-label="Предыдущее изображение">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M14.5 5L7.5 12L14.5 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="iconbtn" type="button" id="photoNext" aria-label="Следующее изображение">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9.5 5L16.5 12L9.5 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
